@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archive folders (not needed for deployment)
+_archive/
+analysis/
+data_archive/
+documentation/
+results_archive/
+revenue_data/
+scripts/
+substack-post/
+config/
+
+# Claude Code specific files
+CLAUDE.md
+.claude/
+.vscode/extensions.json

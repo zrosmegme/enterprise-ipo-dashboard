@@ -1,0 +1,27 @@
+# Archive and backup folders
+_archive/
+analysis/
+data_archive/
+documentation/
+results_archive/
+revenue_data/
+scripts/
+substack-post/
+config/
+
+# Backup files
+src/data_*.js
+*.md
+!README.md
+
+# Build artifacts
+dist/
+node_modules/
+.vite/
+
+# Development files
+*.log
+.DS_Store
+
+# Test files
+test.html
