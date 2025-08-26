@@ -43,12 +43,12 @@ const getPerformanceIcon = (currentPrice, ipoPrice) => {
 };
 
 const getStatusColor = (status) => {
-  if (status === 'Public') return 'bg-green-100 text-green-800';
-  if (status.includes('Acquired')) return 'bg-purple-100 text-purple-800';
-  if (status.includes('Merged')) return 'bg-blue-100 text-blue-800';
-  if (status.includes('Delisted')) return 'bg-red-100 text-red-800';
-  if (status.includes('Re-IPO')) return 'bg-orange-100 text-orange-800';
-  return 'bg-gray-100 text-gray-800';
+  if (status === 'Public') return 'text-green-700';
+  if (status.includes('Acquired')) return 'text-purple-700';
+  if (status.includes('Merged')) return 'text-blue-700';
+  if (status.includes('Delisted')) return 'text-red-700';
+  if (status.includes('Re-IPO')) return 'text-orange-700';
+  return 'text-gray-700';
 };
 
 const getTagColor = (index) => {
@@ -221,64 +221,68 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
       </h3>
     </div>
     
-    <div className="overflow-x-auto max-h-[600px]">
+    <div className="overflow-x-auto max-h-[750px]">
       <table className="w-full">
         <thead className="bg-gray-50 sticky top-0">
           <tr>
             <th 
-              className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase cursor-pointer hover:bg-gray-100"
+              className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase cursor-pointer hover:bg-gray-100 w-[20%]"
               onClick={() => handleSort('company')}
             >
               Company {getSortIcon('company')}
             </th>
             <th 
-              className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase cursor-pointer hover:bg-gray-100"
+              className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase cursor-pointer hover:bg-gray-100 w-[8%]"
               onClick={() => handleSort('year')}
             >
-              Year {getSortIcon('year')}
+              IPO Year {getSortIcon('year')}
             </th>
             <th 
-              className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase cursor-pointer hover:bg-gray-100"
+              className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase cursor-pointer hover:bg-gray-100 w-[18%]"
               onClick={() => handleSort('firstDayPop')}
             >
-              IPO Performance {getSortIcon('firstDayPop')}
+              <div>
+                <div>IPO → Current/Acq Price</div>
+                <div className="text-[10px] font-normal text-gray-400">(as of Aug 2025)</div>
+              </div>
+              {getSortIcon('firstDayPop')}
             </th>
             <th 
-              className={`px-4 py-3 text-left text-xs font-medium uppercase cursor-pointer hover:bg-gray-100 ${
+              className={`px-3 py-2 text-left text-xs font-medium uppercase cursor-pointer hover:bg-gray-100 w-[15%] ${
                 sortField === 'year3AnnualizedReturn' ? 'bg-blue-100 text-blue-800' : 'text-gray-500'
               }`}
               onClick={() => handleSort('year3AnnualizedReturn')}
             >
-              Returns from Day 1 {getSortIcon('year3AnnualizedReturn')}
+              Returns from Day 1 After IPO {getSortIcon('year3AnnualizedReturn')}
             </th>
             <th 
-              className={`px-4 py-3 text-left text-xs font-medium uppercase cursor-pointer hover:bg-gray-100 ${
+              className={`px-3 py-2 text-left text-xs font-medium uppercase cursor-pointer hover:bg-gray-100 w-[12%] ${
                 sortField === 'year3Outperformance' ? 'bg-blue-100 text-blue-800' : 'text-gray-500'
               }`}
               onClick={() => handleSort('year3Outperformance')}
             >
-              vs IGV Index {getSortIcon('year3Outperformance')}
+              Returns from Day 1 After IPO vs. IGV Index {getSortIcon('year3Outperformance')}
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tags</th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase w-[22%]">Tags</th>
+            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase w-[5%]">Status</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {filteredIPOs.map((ipo, index) => (
             <tr key={index} className="hover:bg-gray-50">
-              <td className="px-4 py-3">
+              <td className="px-3 py-2">
                 <div>
                   <div className="text-sm font-medium text-gray-900">{ipo.company}</div>
                   <div className="text-xs text-gray-500">{ipo.ticker}</div>
                 </div>
               </td>
-              <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900">{ipo.year}</td>
-              <td className="px-4 py-3 whitespace-nowrap">
+              <td className="px-3 py-2 whitespace-nowrap text-sm text-gray-900">{ipo.year}</td>
+              <td className="px-3 py-2 whitespace-nowrap">
                 <div className="flex items-center">
                   <span className="mr-2">{getPerformanceIcon(ipo.currentPrice, ipo.ipoPrice)}</span>
                   <div>
                     <div className="text-sm font-medium text-gray-900">
-                      ${ipo.ipoPrice} → {ipo.acquisitionPrice ? `$${ipo.acquisitionPrice} (acquired)` : ipo.currentPrice ? `$${ipo.currentPrice}` : 'N/A'}
+                      ${ipo.ipoPrice} → {ipo.acquisitionPrice ? `$${ipo.acquisitionPrice} (acq)` : ipo.currentPrice ? `$${ipo.currentPrice}` : 'N/A'}
                     </div>
                     <div className="text-xs text-gray-500">
                       {ipo.firstDayPop > 0 ? '+' : ''}{ipo.firstDayPop}% day 1
@@ -286,7 +290,7 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
                   </div>
                 </div>
               </td>
-              <td className="px-4 py-3 whitespace-nowrap">
+              <td className="px-3 py-2 whitespace-nowrap">
                 <div className="text-sm">
                   {ipo.year3AnnualizedReturn !== null && ipo.year3AnnualizedReturn !== undefined ? (
                     <>
@@ -310,7 +314,7 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
                   )}
                 </div>
               </td>
-              <td className="px-4 py-3 whitespace-nowrap">
+              <td className="px-3 py-2 whitespace-nowrap">
                 <div className="text-sm">
                   {ipo.year3Outperformance !== null && ipo.year3Outperformance !== undefined ? (
                     <>
@@ -334,7 +338,7 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
                   )}
                 </div>
               </td>
-              <td className="px-4 py-3">
+              <td className="px-3 py-2">
                 <div className="flex flex-wrap gap-1">
                   {ipo.tags.slice(0, 3).map((tag, tagIndex) => (
                     <span key={tagIndex} className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getTagColor(tagIndex)}`}>
@@ -348,8 +352,8 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
                   )}
                 </div>
               </td>
-              <td className="px-4 py-3 whitespace-nowrap">
-                <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getStatusColor(ipo.status)}`}>
+              <td className="px-3 py-2">
+                <span className={`text-xs font-medium ${getStatusColor(ipo.status)}`}>
                   {ipo.status}
                 </span>
               </td>
@@ -832,7 +836,10 @@ const CompleteEnterpriseIPODashboard = () => {
             Complete Enterprise Software IPO Dashboard
           </h1>
           <p className="text-gray-600 text-lg">
-            Comprehensive database of {ipoData.length} enterprise software IPOs (2010-2025) with multi-tag categorization
+            Comprehensive database of {ipoData.length} enterprise software IPOs (2004-2025) with multi-tag categorization
+          </p>
+          <p className="text-sm text-amber-600 mt-2">
+            ⚠️ Stock prices last updated: August 2025 | Acquisition prices reflect deal values
           </p>
         </div>
 
@@ -852,10 +859,9 @@ const CompleteEnterpriseIPODashboard = () => {
 
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>Showing {filteredIPOs.length} of {ipoData.length} total enterprise software IPOs</p>
-          <p><strong>✅ Enhanced with Real Financial Data:</strong> EV/Sales calculated using actual TTM revenue at IPO dates</p>
-          <p><strong>✅ Dual Valuation Metrics:</strong> Shows EV/Sales at both IPO price and first-day closing price</p>
-          <p><strong>📊 Data Quality:</strong> 76% success rate fetching historical revenue data from Yahoo Finance</p>
-          <p><strong>🔵 Blue = IPO Valuation</strong> | <strong>🟢 Green = First Day Valuation</strong></p>
+          <p className="mt-2 text-xs text-gray-400">
+            Price data snapshot from August 2025. IPO prices are historical, current prices need regular updates.
+          </p>
         </div>
       </div>
     </div>
