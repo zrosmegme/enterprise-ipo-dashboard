@@ -1,5 +1,5 @@
 // Updated IPO data with comprehensive historical returns analysis
-// Generated on 2025-08-25T20:57:31.333803
+// Generated on 2025-08-25T21:00:29.039358
 // Returns calculated from actual first day closing prices
 // IGV (iShares Software ETF) used as benchmark
 // Comprehensive dataset with 148 companies
@@ -3806,9 +3806,9 @@ export const ENTERPRISE_IPO_DATA = [
   {
     "year": 2018,
     "company": "Ceridian",
-    "ticker": "CDAY",
+    "ticker": "DAY",
     "ipoPrice": 22,
-    "currentPrice": 85,
+    "currentPrice": 69.49,
     "firstDayPop": 13.6,
     "evSales": 15,
     "tags": [
@@ -3851,9 +3851,9 @@ export const ENTERPRISE_IPO_DATA = [
   {
     "year": 2018,
     "company": "Ceridian",
-    "ticker": "CDAY",
+    "ticker": "DAY",
     "ipoPrice": 22,
-    "currentPrice": null,
+    "currentPrice": 69.49,
     "firstDayPop": 41.9,
     "evSales": null,
     "tags": [
@@ -6574,7 +6574,7 @@ export const ENTERPRISE_IPO_DATA = [
       "Cloud",
       "Infrastructure"
     ],
-    "status": "Public",
+    "status": "Acquired by Francisco Partners 2023",
     "revenueSource": "WebSearch S-1 (at IPO)",
     "revenueConfidence": "medium",
     "firstDayClose": 26.9,
@@ -6831,9 +6831,9 @@ export const ENTERPRISE_IPO_DATA = [
   {
     "year": 2020,
     "company": "ZoomInfo",
-    "ticker": "ZI",
+    "ticker": "GTM",
     "ipoPrice": 21,
-    "currentPrice": null,
+    "currentPrice": 10.46,
     "firstDayPop": 61.9,
     "evSales": null,
     "tags": [
@@ -8427,7 +8427,7 @@ export const ENTERPRISE_IPO_DATA = [
       "Workforce Management",
       "Application"
     ],
-    "status": "Public",
+    "status": "Acquired by Apax Partners 2024",
     "revenueSource": "WebSearch S-1 (at IPO)",
     "revenueConfidence": "medium",
     "firstDayClose": 26.05,
