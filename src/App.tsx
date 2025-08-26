@@ -51,6 +51,35 @@ const getStatusColor = (status) => {
   return 'text-gray-700';
 };
 
+// Axis formatting functions for scatter plot
+const formatAxisValue = (value, fieldName) => {
+  if (value === null || value === undefined || isNaN(value)) return '';
+  
+  // Percentage fields
+  if (fieldName.includes('Pop') || fieldName.includes('Return') || fieldName.includes('Outperformance')) {
+    return Math.round(value) + '%';
+  }
+  
+  // Price fields
+  if (fieldName.includes('Price')) {
+    if (value >= 1000000) {
+      return '$' + Math.round(value / 1000000) + 'M';
+    } else if (value >= 1000) {
+      return '$' + Math.round(value / 1000) + 'K';
+    } else {
+      return '$' + Math.round(value);
+    }
+  }
+  
+  // Year field
+  if (fieldName === 'year') {
+    return Math.round(value).toString();
+  }
+  
+  // Default: round to whole number
+  return Math.round(value).toString();
+};
+
 const getTagColor = (index) => {
   const colors = [
     'bg-blue-100 text-blue-800',
@@ -366,29 +395,41 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
   );
 };
 
-const BarChartView = ({ chartData }) => (
-  <div className="bg-white rounded-xl shadow-lg p-6">
-    <h3 className="text-lg font-semibold text-gray-900 mb-4">IPO Activity by Year</h3>
-    <ResponsiveContainer width="100%" height={400}>
-      <BarChart data={chartData.yearData}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-        <XAxis dataKey="year" tick={{ fontSize: 11, fill: '#4b5563' }} />
-        <YAxis tick={{ fontSize: 12, fill: '#4b5563' }} />
-        <Tooltip />
-        <Bar dataKey="count" fill="#3b82f6" radius={[4, 4, 0, 0]}>
-          {chartData.yearData.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={entry.year === 2021 ? '#ef4444' : entry.year === 2022 ? '#6b7280' : '#3b82f6'} />
-          ))}
-        </Bar>
-      </BarChart>
-    </ResponsiveContainer>
-    <div className="mt-4 text-xs text-gray-500">
-      <p><strong>Peak Year:</strong> 2021 (37 IPOs) - Historic bubble peak</p>
-      <p><strong>Other Strong Years:</strong> 2014 (9 IPOs), 2017 (8 IPOs), 2018 (14 IPOs), 2019 (9 IPOs), 2020 (14 IPOs)</p>
-      <p><strong>Recovery:</strong> 2023 (1 IPO), 2024 (3 IPOs), 2025 YTD (2 IPOs)</p>
+const BarChartView = ({ chartData }) => {
+  // Calculate dynamic statistics
+  const sortedYears = [...chartData.yearData].sort((a, b) => b.count - a.count);
+  const peakYear = sortedYears[0];
+  const strongYears = sortedYears.slice(1, 6).filter(year => year.count >= 5);
+  const recentYears = chartData.yearData.filter(year => year.year >= 2023).sort((a, b) => a.year - b.year);
+  
+  return (
+    <div className="bg-white rounded-xl shadow-lg p-6">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">IPO Activity by Year</h3>
+      <ResponsiveContainer width="100%" height={400}>
+        <BarChart data={chartData.yearData}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+          <XAxis dataKey="year" tick={{ fontSize: 11, fill: '#4b5563' }} />
+          <YAxis tick={{ fontSize: 12, fill: '#4b5563' }} tickFormatter={(value) => Math.round(value).toString()} domain={[0, 'dataMax']} />
+          <Tooltip />
+          <Bar dataKey="count" fill="#3b82f6" radius={[4, 4, 0, 0]}>
+            {chartData.yearData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={entry.year === 2021 ? '#ef4444' : entry.year === 2022 ? '#6b7280' : '#3b82f6'} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+      <div className="mt-4 text-xs text-gray-500">
+        <p><strong>Peak Year:</strong> {peakYear.year} ({peakYear.count} IPOs){peakYear.year === 2021 ? ' - Historic bubble peak' : ''}</p>
+        {strongYears.length > 0 && (
+          <p><strong>Other Strong Years:</strong> {strongYears.map(year => `${year.year} (${year.count} IPOs)`).join(', ')}</p>
+        )}
+        {recentYears.length > 0 && (
+          <p><strong>Recent Activity:</strong> {recentYears.map(year => `${year.year} (${year.count} IPO${year.count !== 1 ? 's' : ''})`).join(', ')}</p>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const ScatterPlotView = ({ filteredIPOs, scatterXAxis, setScatterXAxis, scatterYAxis, setScatterYAxis }) => {
   const axisOptions = {
@@ -479,8 +520,8 @@ const ScatterPlotView = ({ filteredIPOs, scatterXAxis, setScatterXAxis, scatterY
         </div>
       </div>
       
-      <ResponsiveContainer width="100%" height={400}>
-        <ScatterChart>
+      <ResponsiveContainer width="100%" height={450}>
+        <ScatterChart margin={{ top: 20, right: 20, bottom: 60, left: 60 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
           <XAxis 
             type="number" 
@@ -488,7 +529,8 @@ const ScatterPlotView = ({ filteredIPOs, scatterXAxis, setScatterXAxis, scatterY
             name={axisOptions[scatterXAxis]}
             domain={xAxisRange}
             tick={{ fontSize: 12, fill: '#4b5563' }}
-            label={{ value: axisOptions[scatterXAxis], position: 'insideBottom', offset: -5 }}
+            tickFormatter={(value) => formatAxisValue(value, scatterXAxis)}
+            label={{ value: axisOptions[scatterXAxis], position: 'insideBottom', offset: -10 }}
           />
           <YAxis 
             type="number" 
@@ -496,6 +538,7 @@ const ScatterPlotView = ({ filteredIPOs, scatterXAxis, setScatterXAxis, scatterY
             name={axisOptions[scatterYAxis]}
             domain={yAxisRange}
             tick={{ fontSize: 12, fill: '#4b5563' }}
+            tickFormatter={(value) => formatAxisValue(value, scatterYAxis)}
             label={{ value: axisOptions[scatterYAxis], angle: -90, position: 'insideLeft' }}
           />
           <Tooltip 
@@ -507,16 +550,12 @@ const ScatterPlotView = ({ filteredIPOs, scatterXAxis, setScatterXAxis, scatterY
                     <p className="font-semibold">{data.company} ({data.ticker})</p>
                     <p className="text-sm">{axisOptions[scatterXAxis]}: {
                       typeof data[scatterXAxis] === 'number' ? 
-                        (scatterXAxis.includes('Price') || scatterXAxis === 'returnPct' ? 
-                          (scatterXAxis === 'returnPct' ? data[scatterXAxis].toFixed(1) + '%' : '$' + data[scatterXAxis].toFixed(2)) : 
-                          data[scatterXAxis].toFixed(1)) : 
+                        formatAxisValue(data[scatterXAxis], scatterXAxis) : 
                         data[scatterXAxis]
                     }</p>
                     <p className="text-sm">{axisOptions[scatterYAxis]}: {
                       typeof data[scatterYAxis] === 'number' ? 
-                        (scatterYAxis.includes('Price') || scatterYAxis === 'returnPct' ? 
-                          (scatterYAxis === 'returnPct' ? data[scatterYAxis].toFixed(1) + '%' : '$' + data[scatterYAxis].toFixed(2)) : 
-                          data[scatterYAxis].toFixed(1)) : 
+                        formatAxisValue(data[scatterYAxis], scatterYAxis) : 
                         data[scatterYAxis]
                     }</p>
                     <p className="text-xs text-gray-500 mt-1">{data.status}</p>
@@ -534,29 +573,6 @@ const ScatterPlotView = ({ filteredIPOs, scatterXAxis, setScatterXAxis, scatterY
         </ScatterChart>
       </ResponsiveContainer>
       
-      <div className="mt-4 grid grid-cols-2 gap-4 text-xs text-gray-500">
-        <div>
-          <p className="font-semibold mb-1">Popular Analyses:</p>
-          <button 
-            onClick={() => { setScatterXAxis('firstDayPop'); setScatterYAxis('year1Return'); }}
-            className="block hover:text-blue-600 cursor-pointer">→ First Day Pop vs Year 1 Return</button>
-          <button 
-            onClick={() => { setScatterXAxis('year1Return'); setScatterYAxis('year1Outperformance'); }}
-            className="block hover:text-blue-600 cursor-pointer">→ Year 1 Return vs IGV Outperformance</button>
-          <button 
-            onClick={() => { setScatterXAxis('year'); setScatterYAxis('year1Outperformance'); }}
-            className="block hover:text-blue-600 cursor-pointer">→ Year vs IGV Outperformance</button>
-        </div>
-        <div>
-          <p className="font-semibold mb-1">Current View Insights:</p>
-          {scatterXAxis === 'ipoPrice' && scatterYAxis === 'returnPct' && 
-            <p>IPO price level shows varied correlation with long-term returns</p>}
-          {scatterXAxis === 'firstDayPop' && scatterYAxis === 'returnPct' && 
-            <p>First day performance is a weak predictor of long-term returns</p>}
-          {scatterXAxis === 'year' && scatterYAxis === 'firstDayPop' && 
-            <p>First day pops were highest during bubble years (2020-2021)</p>}
-        </div>
-      </div>
     </div>
   );
 };
@@ -798,10 +814,18 @@ const CompleteEnterpriseIPODashboard = () => {
       yearCounts[ipo.year] = (yearCounts[ipo.year] || 0) + 1;
     });
 
-    const yearData = Object.entries(yearCounts).map(([year, count]) => ({
-      year: parseInt(year),
-      count
-    })).sort((a, b) => a.year - b.year);
+    // Generate complete year range from 2010 to 2025
+    const currentYear = new Date().getFullYear();
+    const startYear = 2010; // Focus on recent enterprise software IPO activity
+    const endYear = Math.max(currentYear, 2025);
+    
+    const yearData = [];
+    for (let year = startYear; year <= endYear; year++) {
+      yearData.push({
+        year: year,
+        count: yearCounts[year] || 0
+      });
+    }
 
     return { yearData };
   }, [ipoData]);
