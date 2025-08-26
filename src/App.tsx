@@ -243,7 +243,7 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
             >
               <div>
                 <div>IPO → Current/Acq Price</div>
-                <div className="text-[10px] font-normal text-gray-400">(as of Aug 2025)</div>
+                <div className="text-[10px] font-normal text-gray-400">(as of August 2025)</div>
               </div>
               {getSortIcon('firstDayPop')}
             </th>
@@ -838,9 +838,6 @@ const CompleteEnterpriseIPODashboard = () => {
           <p className="text-gray-600 text-lg">
             Comprehensive database of {ipoData.length} enterprise software IPOs (2004-2025) with multi-tag categorization
           </p>
-          <p className="text-sm text-amber-600 mt-2">
-            ⚠️ Stock prices last updated: August 2025 | Acquisition prices reflect deal values
-          </p>
         </div>
 
         <SummaryStats filteredIPOs={filteredIPOs} />
@@ -859,8 +856,8 @@ const CompleteEnterpriseIPODashboard = () => {
 
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>Showing {filteredIPOs.length} of {ipoData.length} total enterprise software IPOs</p>
-          <p className="mt-2 text-xs text-gray-400">
-            Price data snapshot from August 2025. IPO prices are historical, current prices need regular updates.
+          <p className="mt-2 text-xs text-amber-600">
+            ⚠️ Stock prices last updated: August 2025 | IPO prices are historical | Acquisition prices reflect deal values
           </p>
         </div>
       </div>

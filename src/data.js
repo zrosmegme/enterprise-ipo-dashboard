@@ -1,5 +1,5 @@
 // Updated IPO data with comprehensive historical returns analysis
-// Generated on 2025-08-19T12:25:13.469Z
+// Generated on 2025-08-25T20:57:31.333803
 // Returns calculated from actual first day closing prices
 // IGV (iShares Software ETF) used as benchmark
 // Comprehensive dataset with 148 companies
@@ -736,7 +736,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Guidewire",
     "ticker": "GWRE",
     "ipoPrice": 13,
-    "currentPrice": 185,
+    "currentPrice": 211.36,
     "firstDayPop": 33,
     "evSales": 10.5,
     "tags": [
@@ -782,7 +782,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Palo Alto Networks",
     "ticker": "PANW",
     "ipoPrice": 42,
-    "currentPrice": 1890,
+    "currentPrice": 184.55,
     "firstDayPop": 26.5,
     "evSales": 20,
     "tags": [
@@ -835,7 +835,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "ServiceNow",
     "ticker": "NOW",
     "ipoPrice": 18,
-    "currentPrice": 856.37,
+    "currentPrice": 879.94,
     "firstDayPop": 36.7,
     "evSales": 12,
     "tags": [
@@ -951,7 +951,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Workday",
     "ticker": "WDAY",
     "ipoPrice": 28,
-    "currentPrice": 280,
+    "currentPrice": 223.39,
     "firstDayPop": 73.9,
     "evSales": 15,
     "tags": [
@@ -1125,7 +1125,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "RingCentral",
     "ticker": "RNG",
     "ipoPrice": 13,
-    "currentPrice": 45,
+    "currentPrice": 31.23,
     "firstDayPop": 26.7,
     "evSales": 14,
     "tags": [
@@ -1246,7 +1246,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Veeva Systems",
     "ticker": "VEEV",
     "ipoPrice": 20,
-    "currentPrice": 312,
+    "currentPrice": 285.18,
     "firstDayPop": 85.8,
     "evSales": 12.5,
     "tags": [
@@ -1303,7 +1303,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "CyberArk",
     "ticker": "CYBR",
     "ipoPrice": 16,
-    "currentPrice": 417.14,
+    "currentPrice": 438.91,
     "firstDayPop": 91.4,
     "evSales": 22,
     "tags": [
@@ -1353,7 +1353,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Five9",
     "ticker": "FIVN",
     "ipoPrice": 7,
-    "currentPrice": 145,
+    "currentPrice": 26.7,
     "firstDayPop": 23.1,
     "evSales": 8,
     "tags": [
@@ -1465,7 +1465,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "HubSpot",
     "ticker": "HUBS",
     "ipoPrice": 25,
-    "currentPrice": 620,
+    "currentPrice": 467.92,
     "firstDayPop": 20.4,
     "evSales": 14,
     "tags": [
@@ -1593,7 +1593,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Paycom",
     "ticker": "PAYC",
     "ipoPrice": 15,
-    "currentPrice": 216.58,
+    "currentPrice": 230.78,
     "firstDayPop": 3.3,
     "evSales": 7.5,
     "tags": [
@@ -1649,7 +1649,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Q2 Holdings",
     "ticker": "QTWO",
     "ipoPrice": 13,
-    "currentPrice": 78.75,
+    "currentPrice": 77.31,
     "firstDayPop": 28.5,
     "evSales": 14,
     "tags": [
@@ -1698,7 +1698,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Varonis Systems",
     "ticker": "VRNS",
     "ipoPrice": 22,
-    "currentPrice": 55.83,
+    "currentPrice": 57.96,
     "firstDayPop": 31.8,
     "evSales": 18,
     "tags": [
@@ -1814,7 +1814,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Alarm.com",
     "ticker": "ALRM",
     "ipoPrice": 13,
-    "currentPrice": 68,
+    "currentPrice": 57.83,
     "firstDayPop": 29.8,
     "evSales": 9.5,
     "tags": [
@@ -1865,7 +1865,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "AppFolio",
     "ticker": "APPF",
     "ipoPrice": 12,
-    "currentPrice": 300,
+    "currentPrice": 274.79,
     "firstDayPop": 17.3,
     "evSales": 15,
     "tags": [
@@ -1919,7 +1919,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Atlassian",
     "ticker": "TEAM",
     "ipoPrice": 21,
-    "currentPrice": 230,
+    "currentPrice": 168.67,
     "firstDayPop": 0,
     "evSales": 13.6,
     "tags": [
@@ -1973,7 +1973,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Box",
     "ticker": "BOX",
     "ipoPrice": 14,
-    "currentPrice": 28.5,
+    "currentPrice": 31.42,
     "firstDayPop": 65.9,
     "evSales": 9,
     "tags": [
@@ -2084,7 +2084,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "GoDaddy",
     "ticker": "GDDY",
     "ipoPrice": 20,
-    "currentPrice": 140,
+    "currentPrice": 145.94,
     "firstDayPop": 0,
     "evSales": 4.5,
     "tags": [
@@ -2256,7 +2256,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Pure Storage",
     "ticker": "PSTG",
     "ipoPrice": 20,
-    "currentPrice": 85,
+    "currentPrice": 59.05,
     "firstDayPop": -15,
     "evSales": 16,
     "tags": [
@@ -2301,7 +2301,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Rapid7",
     "ticker": "RPD",
     "ipoPrice": 16,
-    "currentPrice": 28,
+    "currentPrice": 20.17,
     "firstDayPop": 58,
     "evSales": 12,
     "tags": [
@@ -2346,7 +2346,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Shopify",
     "ticker": "SHOP",
     "ipoPrice": 17,
-    "currentPrice": 1220,
+    "currentPrice": 140.53,
     "firstDayPop": 43.1,
     "evSales": 6.2,
     "tags": [
@@ -2465,7 +2465,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "BlackLine",
     "ticker": "BL",
     "ipoPrice": 17,
-    "currentPrice": null,
+    "currentPrice": 53.01,
     "firstDayPop": 33.8,
     "evSales": null,
     "tags": [
@@ -2575,7 +2575,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Nutanix",
     "ticker": "NTNX",
     "ipoPrice": 16,
-    "currentPrice": 95,
+    "currentPrice": 67.98,
     "firstDayPop": 131.3,
     "evSales": 18,
     "tags": [
@@ -2849,7 +2849,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Twilio",
     "ticker": "TWLO",
     "ipoPrice": 15,
-    "currentPrice": 85,
+    "currentPrice": 104.59,
     "firstDayPop": 91.9,
     "evSales": 25,
     "tags": [
@@ -3016,7 +3016,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Appian",
     "ticker": "APPN",
     "ipoPrice": 12,
-    "currentPrice": 45,
+    "currentPrice": 29.11,
     "firstDayPop": 25.1,
     "evSales": 25,
     "tags": [
@@ -3127,7 +3127,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "MongoDB",
     "ticker": "MDB",
     "ipoPrice": 24,
-    "currentPrice": 285,
+    "currentPrice": 218.44,
     "firstDayPop": 33.6,
     "evSales": 16,
     "tags": [
@@ -3293,7 +3293,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Okta",
     "ticker": "OKTA",
     "ipoPrice": 15,
-    "currentPrice": 110,
+    "currentPrice": 91.35,
     "firstDayPop": 56.7,
     "evSales": 23,
     "tags": [
@@ -3571,7 +3571,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Yext",
     "ticker": "YEXT",
     "ipoPrice": 11,
-    "currentPrice": 3.25,
+    "currentPrice": 9.05,
     "firstDayPop": 21.9,
     "evSales": 18,
     "tags": [
@@ -3896,7 +3896,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "DocuSign",
     "ticker": "DOCU",
     "ipoPrice": 29,
-    "currentPrice": 75,
+    "currentPrice": 73.94,
     "firstDayPop": 39.7,
     "evSales": 23,
     "tags": [
@@ -4054,7 +4054,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Domo",
     "ticker": "DOMO",
     "ipoPrice": 21,
-    "currentPrice": 8.75,
+    "currentPrice": 13.84,
     "firstDayPop": 30,
     "evSales": 45,
     "tags": [
@@ -4100,7 +4100,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Dropbox",
     "ticker": "DBX",
     "ipoPrice": 21,
-    "currentPrice": 25,
+    "currentPrice": 28.48,
     "firstDayPop": 35.6,
     "evSales": 9.5,
     "tags": [
@@ -4155,7 +4155,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Elastic",
     "ticker": "ESTC",
     "ipoPrice": 36,
-    "currentPrice": 115,
+    "currentPrice": 78.97,
     "firstDayPop": 94.4,
     "evSales": 20,
     "tags": [
@@ -4485,7 +4485,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Tenable",
     "ticker": "TENB",
     "ipoPrice": 23,
-    "currentPrice": 45,
+    "currentPrice": 30.01,
     "firstDayPop": 31.5,
     "evSales": 30,
     "tags": [
@@ -4660,7 +4660,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Zscaler",
     "ticker": "ZS",
     "ipoPrice": 16,
-    "currentPrice": 195,
+    "currentPrice": 269.66,
     "firstDayPop": 106.3,
     "evSales": 28,
     "tags": [
@@ -4777,7 +4777,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Bill.com",
     "ticker": "BILL",
     "ipoPrice": 22,
-    "currentPrice": 65,
+    "currentPrice": 41.06,
     "firstDayPop": 75.9,
     "evSales": 28,
     "tags": [
@@ -4829,7 +4829,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Cloudflare",
     "ticker": "NET",
     "ipoPrice": 15,
-    "currentPrice": 115,
+    "currentPrice": 195.88,
     "firstDayPop": 20,
     "evSales": 22,
     "tags": [
@@ -5005,7 +5005,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "CrowdStrike",
     "ticker": "CRWD",
     "ipoPrice": 34,
-    "currentPrice": 385,
+    "currentPrice": 418.83,
     "firstDayPop": 70.6,
     "evSales": 30,
     "tags": [
@@ -5066,7 +5066,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Datadog",
     "ticker": "DDOG",
     "ipoPrice": 27,
-    "currentPrice": 125,
+    "currentPrice": 128.38,
     "firstDayPop": 39.1,
     "evSales": 30,
     "tags": [
@@ -5242,7 +5242,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Dynatrace",
     "ticker": "DT",
     "ipoPrice": 18,
-    "currentPrice": 58,
+    "currentPrice": 48.41,
     "firstDayPop": 32.5,
     "evSales": 25,
     "tags": [
@@ -5454,7 +5454,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "PagerDuty",
     "ticker": "PD",
     "ipoPrice": 24,
-    "currentPrice": 22.5,
+    "currentPrice": 16.33,
     "firstDayPop": 59.4,
     "evSales": 32,
     "tags": [
@@ -5747,7 +5747,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Zoom",
     "ticker": "ZM",
     "ipoPrice": 36,
-    "currentPrice": 85,
+    "currentPrice": 81.35,
     "firstDayPop": 72.2,
     "evSales": 25,
     "tags": [
@@ -5905,7 +5905,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Asana",
     "ticker": "ASAN",
     "ipoPrice": 21,
-    "currentPrice": 12.85,
+    "currentPrice": 14.15,
     "firstDayPop": 37.1,
     "evSales": 35,
     "tags": [
@@ -5969,7 +5969,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Bentley Systems",
     "ticker": "BSY",
     "ipoPrice": 22,
-    "currentPrice": 58,
+    "currentPrice": 53.95,
     "firstDayPop": 52.2,
     "evSales": 12,
     "tags": [
@@ -6020,7 +6020,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "BigCommerce",
     "ticker": "BIGC",
     "ipoPrice": 24,
-    "currentPrice": 8.25,
+    "currentPrice": 4.78,
     "firstDayPop": 201.1,
     "evSales": 35,
     "tags": [
@@ -6067,7 +6067,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "C3.ai",
     "ticker": "AI",
     "ipoPrice": 42,
-    "currentPrice": 28.5,
+    "currentPrice": 17.09,
     "firstDayPop": 120.2,
     "evSales": 65,
     "tags": [
@@ -6213,7 +6213,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Certara",
     "ticker": "CERT",
     "ipoPrice": 23,
-    "currentPrice": 11,
+    "currentPrice": 10.81,
     "firstDayPop": 65.6,
     "evSales": 8.5,
     "tags": [
@@ -6251,7 +6251,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "JFrog",
     "ticker": "FROG",
     "ipoPrice": 44,
-    "currentPrice": 35,
+    "currentPrice": 47.5,
     "firstDayPop": 47.3,
     "evSales": 35,
     "tags": [
@@ -6306,7 +6306,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "nCino",
     "ticker": "NCNO",
     "ipoPrice": 31,
-    "currentPrice": 35.5,
+    "currentPrice": 28.37,
     "firstDayPop": 195.5,
     "evSales": 45,
     "tags": [
@@ -6342,7 +6342,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Palantir",
     "ticker": "PLTR",
     "ipoPrice": 7.25,
-    "currentPrice": 68.5,
+    "currentPrice": 157.17,
     "firstDayPop": 31,
     "evSales": 45,
     "tags": [
@@ -6500,7 +6500,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Snowflake",
     "ticker": "SNOW",
     "ipoPrice": 120,
-    "currentPrice": 135,
+    "currentPrice": 194.68,
     "firstDayPop": 111.6,
     "evSales": 100,
     "tags": [
@@ -6611,7 +6611,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Unity",
     "ticker": "U",
     "ipoPrice": 52,
-    "currentPrice": 22,
+    "currentPrice": 39.83,
     "firstDayPop": 31.4,
     "evSales": 28,
     "tags": [
@@ -6774,7 +6774,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Vertex Inc",
     "ticker": "VERX",
     "ipoPrice": 19,
-    "currentPrice": 52,
+    "currentPrice": 25.36,
     "firstDayPop": 25.9,
     "evSales": 11,
     "tags": [
@@ -6879,7 +6879,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Alkami Technology",
     "ticker": "ALKT",
     "ipoPrice": 30,
-    "currentPrice": 28,
+    "currentPrice": 24.89,
     "firstDayPop": 43.3,
     "evSales": 18,
     "tags": [
@@ -6935,7 +6935,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Amplitude",
     "ticker": "AMPL",
     "ipoPrice": 35,
-    "currentPrice": 8.75,
+    "currentPrice": 11.14,
     "firstDayPop": 56.6,
     "evSales": 35,
     "tags": [
@@ -6986,7 +6986,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "AppLovin",
     "ticker": "APP",
     "ipoPrice": 80,
-    "currentPrice": 125,
+    "currentPrice": 450.68,
     "firstDayPop": -18.5,
     "evSales": 15,
     "tags": [
@@ -7035,7 +7035,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "AvePoint",
     "ticker": "AVPT",
     "ipoPrice": 10,
-    "currentPrice": 18.94,
+    "currentPrice": 15.29,
     "firstDayPop": 48.4,
     "evSales": 10,
     "tags": [
@@ -7073,7 +7073,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "AvidXchange",
     "ticker": "AVDX",
     "ipoPrice": 25,
-    "currentPrice": 8.5,
+    "currentPrice": 9.92,
     "firstDayPop": -0.2,
     "evSales": 18,
     "tags": [
@@ -7129,7 +7129,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Backblaze",
     "ticker": "BLZE",
     "ipoPrice": 16,
-    "currentPrice": 9.25,
+    "currentPrice": 8.07,
     "firstDayPop": 24.4,
     "evSales": 8,
     "tags": [
@@ -7176,7 +7176,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Blend",
     "ticker": "BLND",
     "ipoPrice": 18,
-    "currentPrice": 3.25,
+    "currentPrice": 3.58,
     "firstDayPop": 16.1,
     "evSales": 18,
     "tags": [
@@ -7223,7 +7223,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Braze",
     "ticker": "BRZE",
     "ipoPrice": 65,
-    "currentPrice": 42.5,
+    "currentPrice": 26.02,
     "firstDayPop": 43.7,
     "evSales": 45,
     "tags": [
@@ -7266,7 +7266,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "CCC Intelligent Solutions",
     "ticker": "CCCS",
     "ipoPrice": 10,
-    "currentPrice": 9.5,
+    "currentPrice": 9.75,
     "firstDayPop": 32.8,
     "evSales": 7,
     "tags": [
@@ -7304,7 +7304,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Clearwater Analytics",
     "ticker": "CWAN",
     "ipoPrice": 18,
-    "currentPrice": 19,
+    "currentPrice": 20.53,
     "firstDayPop": 40.9,
     "evSales": 20,
     "tags": [
@@ -7353,7 +7353,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Confluent",
     "ticker": "CFLT",
     "ipoPrice": 36,
-    "currentPrice": 21,
+    "currentPrice": 17.8,
     "firstDayPop": 25,
     "evSales": 45,
     "tags": [
@@ -7481,7 +7481,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "CS Disco",
     "ticker": "LAW",
     "ipoPrice": 32,
-    "currentPrice": 8.5,
+    "currentPrice": 5.11,
     "firstDayPop": 28.1,
     "evSales": 25,
     "tags": [
@@ -7537,7 +7537,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "DigitalOcean",
     "ticker": "DOCN",
     "ipoPrice": 47,
-    "currentPrice": 38.5,
+    "currentPrice": 31.08,
     "firstDayPop": -9.6,
     "evSales": 25,
     "tags": [
@@ -7588,7 +7588,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "DoubleVerify",
     "ticker": "DV",
     "ipoPrice": 27,
-    "currentPrice": 18.75,
+    "currentPrice": 16.25,
     "firstDayPop": 33.3,
     "evSales": 20,
     "tags": [
@@ -7644,7 +7644,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Doximity",
     "ticker": "DOCS",
     "ipoPrice": 26,
-    "currentPrice": 63,
+    "currentPrice": 66.4,
     "firstDayPop": 103.8,
     "evSales": 25,
     "tags": [
@@ -7756,7 +7756,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "EverCommerce",
     "ticker": "EVCM",
     "ipoPrice": 17,
-    "currentPrice": 9.5,
+    "currentPrice": 11.4,
     "firstDayPop": 2.4,
     "evSales": 12,
     "tags": [
@@ -7804,7 +7804,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Expensify",
     "ticker": "EXFY",
     "ipoPrice": 27,
-    "currentPrice": 54,
+    "currentPrice": 1.83,
     "firstDayPop": 52.1,
     "evSales": 12,
     "tags": [
@@ -7857,7 +7857,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Figma",
     "ticker": "FIG",
     "ipoPrice": 22,
-    "currentPrice": 115.5,
+    "currentPrice": 70.4,
     "firstDayPop": 36.5,
     "evSales": 25,
     "tags": [
@@ -7972,7 +7972,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Freshworks",
     "ticker": "FRSH",
     "ipoPrice": 36,
-    "currentPrice": 14.25,
+    "currentPrice": 13.57,
     "firstDayPop": 32.1,
     "evSales": 30,
     "tags": [
@@ -8027,7 +8027,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "GitLab",
     "ticker": "GTLB",
     "ipoPrice": 77,
-    "currentPrice": 60,
+    "currentPrice": 45.23,
     "firstDayPop": 34.9,
     "evSales": 60,
     "tags": [
@@ -8144,7 +8144,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Informatica",
     "ticker": "INFA",
     "ipoPrice": 29,
-    "currentPrice": null,
+    "currentPrice": 24.77,
     "firstDayPop": 0,
     "evSales": 6.2,
     "tags": [
@@ -8195,7 +8195,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Intapp",
     "ticker": "INTA",
     "ipoPrice": 26,
-    "currentPrice": 48,
+    "currentPrice": 43.6,
     "firstDayPop": 7.7,
     "evSales": 16,
     "tags": [
@@ -8245,7 +8245,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Kaltura",
     "ticker": "KLTR",
     "ipoPrice": 10,
-    "currentPrice": 3.75,
+    "currentPrice": 1.57,
     "firstDayPop": 28.9,
     "evSales": 16,
     "tags": [
@@ -8329,7 +8329,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Marqeta",
     "ticker": "MQ",
     "ipoPrice": 27,
-    "currentPrice": 6.2,
+    "currentPrice": 6.17,
     "firstDayPop": 13,
     "evSales": 35,
     "tags": [
@@ -8368,7 +8368,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Monday.com",
     "ticker": "MNDY",
     "ipoPrice": 155,
-    "currentPrice": 285,
+    "currentPrice": 175.39,
     "firstDayPop": 15.4,
     "evSales": 50,
     "tags": [
@@ -8465,7 +8465,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Procore",
     "ticker": "PCOR",
     "ipoPrice": 67,
-    "currentPrice": 85,
+    "currentPrice": 66.46,
     "firstDayPop": 31.3,
     "evSales": 22,
     "tags": [
@@ -8584,7 +8584,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Samsara",
     "ticker": "IOT",
     "ipoPrice": 23,
-    "currentPrice": 47.5,
+    "currentPrice": 34.4,
     "firstDayPop": 7.4,
     "evSales": 18,
     "tags": [
@@ -8632,7 +8632,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Semrush",
     "ticker": "SEMR",
     "ipoPrice": 14,
-    "currentPrice": null,
+    "currentPrice": 7.7,
     "firstDayPop": 0,
     "evSales": null,
     "tags": [
@@ -8683,7 +8683,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "SentinelOne",
     "ticker": "S",
     "ipoPrice": 35,
-    "currentPrice": 28,
+    "currentPrice": 16.58,
     "firstDayPop": 21.4,
     "evSales": 55,
     "tags": [
@@ -8741,7 +8741,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Sprinklr",
     "ticker": "CXM",
     "ipoPrice": 16,
-    "currentPrice": 9.5,
+    "currentPrice": 8.61,
     "firstDayPop": 10,
     "evSales": 12,
     "tags": [
@@ -8849,7 +8849,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Toast",
     "ticker": "TOST",
     "ipoPrice": 40,
-    "currentPrice": 42.5,
+    "currentPrice": 43.44,
     "firstDayPop": 56.3,
     "evSales": 25,
     "tags": [
@@ -8901,7 +8901,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "UiPath",
     "ticker": "PATH",
     "ipoPrice": 56,
-    "currentPrice": 11.5,
+    "currentPrice": 11.03,
     "firstDayPop": 23.2,
     "evSales": 38,
     "tags": [
@@ -9095,7 +9095,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Weave",
     "ticker": "WEAV",
     "ipoPrice": 24,
-    "currentPrice": 12.5,
+    "currentPrice": 7.62,
     "firstDayPop": -10.4,
     "evSales": 14,
     "tags": [
@@ -9133,7 +9133,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "ZipRecruiter",
     "ticker": "ZIP",
     "ipoPrice": 21,
-    "currentPrice": 12.5,
+    "currentPrice": 5.16,
     "firstDayPop": 0.5,
     "evSales": 8.5,
     "tags": [
@@ -9185,7 +9185,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "CoreWeave",
     "ticker": "CRWV",
     "ipoPrice": 40,
-    "currentPrice": 40,
+    "currentPrice": 92.38,
     "firstDayPop": 0,
     "evSales": 12,
     "tags": [
@@ -9235,7 +9235,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Klaviyo",
     "ticker": "KVYO",
     "ipoPrice": 30,
-    "currentPrice": 34.5,
+    "currentPrice": 31.57,
     "firstDayPop": 9.2,
     "evSales": 12,
     "tags": [
@@ -9286,7 +9286,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Reddit",
     "ticker": "RDDT",
     "ipoPrice": 34,
-    "currentPrice": 135,
+    "currentPrice": 219.73,
     "firstDayPop": 48.4,
     "evSales": 8.5,
     "tags": [
@@ -9356,7 +9356,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "Rubrik",
     "ticker": "RBRK",
     "ipoPrice": 32,
-    "currentPrice": 55,
+    "currentPrice": 87.83,
     "firstDayPop": 15.6,
     "evSales": 14,
     "tags": [
@@ -9410,7 +9410,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "ServiceTitan",
     "ticker": "TTAN",
     "ipoPrice": 18,
-    "currentPrice": 100.5,
+    "currentPrice": 101.76,
     "firstDayPop": 16.7,
     "evSales": 18,
     "tags": [
@@ -9461,7 +9461,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "SailPoint (Re-IPO)",
     "ticker": "SAIL",
     "ipoPrice": 21,
-    "currentPrice": 23,
+    "currentPrice": 20.34,
     "firstDayPop": 10,
     "evSales": 11.5,
     "tags": [
