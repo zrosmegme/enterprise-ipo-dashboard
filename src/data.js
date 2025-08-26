@@ -1,5 +1,5 @@
 // Updated IPO data with comprehensive historical returns analysis
-// Generated on 2025-08-25T21:00:29.039358
+// Generated on 2025-08-25T21:32:14.395771
 // Returns calculated from actual first day closing prices
 // IGV (iShares Software ETF) used as benchmark
 // Comprehensive dataset with 148 companies
@@ -9513,7 +9513,7 @@ export const ENTERPRISE_IPO_DATA = [
     "company": "OneStream Software",
     "ticker": "OS",
     "ipoPrice": 20,
-    "currentPrice": 20,
+    "currentPrice": 19.62,
     "firstDayPop": 0,
     "evSales": 12,
     "tags": [
