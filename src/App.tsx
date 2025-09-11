@@ -272,7 +272,7 @@ const TableView = ({ filteredIPOs, sortField, sortDirection, setSortField, setSo
             >
               <div>
                 <div>IPO → Current/Acq Price</div>
-                <div className="text-[10px] font-normal text-gray-400">(as of August 2025)</div>
+                <div className="text-[10px] font-normal text-gray-400">(as of Sep 10, 2025)</div>
               </div>
               {getSortIcon('firstDayPop')}
             </th>
@@ -881,7 +881,7 @@ const CompleteEnterpriseIPODashboard = () => {
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>Showing {filteredIPOs.length} of {ipoData.length} total enterprise software IPOs</p>
           <p className="mt-2 text-xs text-amber-600">
-            ⚠️ Stock prices last updated: August 2025 | IPO prices are historical | Acquisition prices reflect deal values
+            ⚠️ Stock prices last updated: Sep 10, 2025 | IPO prices are historical | Acquisition prices reflect deal values
           </p>
         </div>
       </div>
